@@ -49,9 +49,9 @@ module "mysql" {
 # }
 
 # # Just for debugging
-# output "MONGO_ENDPOINT" {
-#     value = module.mongodb.MONGO_ENDPOINT
-# }
+output "MONGO_ENDPOINT" {
+    value = module.mongodb.MONGO_ENDPOINT
+}
 
 # output "secret-data" {
 #   value = module.mongodb.data
