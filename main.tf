@@ -41,12 +41,12 @@ module "mysql" {
   RDS_INSTANCE_TYPE    = var.RDS_INSTANCE_TYPE
 }
 
-# # Provisioning RabbitMQ on EC2
-# module "rabbitmq" {
-#   source               = "./vendor/modules/rabbitmq"     # Terrafile is going to download the code from the respective branch of the repo and keeps it local
-#   ENV                  = var.ENV
-#   RABBITMQ_PORT        = var.RABBITMQ_PORT
-# }
+# Provisioning RabbitMQ on EC2
+module "rabbitmq" {
+  source               = "./vendor/modules/rabbitmq"     # Terrafile is going to download the code from the respective branch of the repo and keeps it local
+  ENV                  = var.ENV
+  RABBITMQ_PORT        = var.RABBITMQ_PORT
+}
 
 # # Just for debugging
 output "MONGO_ENDPOINT" {
